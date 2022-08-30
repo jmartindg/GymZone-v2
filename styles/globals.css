@@ -1,26 +1,44 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* Google Font - Inter(400, 500, 600, 700, 800) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/* Custom Styles */
+html {
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+::-webkit-scrollbar {
+  width: 12px;
+  height: 16px;
 }
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-track {
+  background: #111111;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+::-webkit-scrollbar-thumb {
+  background: #fee402;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffee56;
+}
+
+.hero-btn {
+  @apply hover:bg-primaryHover transition duration-150 bg-primary text-secondary font-bold uppercase inline-block text-sm md:text-base py-3 px-4 md:py-4 md:px-6;
+}
+
+.bg-style {
+  @apply bg-no-repeat bg-cover bg-center;
+}
+
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset Styles */
+@layer base {
   body {
-    color: white;
-    background: black;
+    @apply font-inter;
   }
 }
