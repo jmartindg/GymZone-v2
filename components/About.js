@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 
 const About = () => {
@@ -24,22 +25,22 @@ const About = () => {
     {
       id: 1,
       name: "Jane Doe",
-      image: "trainer-1",
+      image: "/trainer-1-min.jpg",
     },
     {
       id: 2,
       name: "John Smith",
-      image: "trainer-2",
+      image: "/trainer-2-min.jpg",
     },
     {
       id: 3,
       name: "Mark Williams",
-      image: "trainer-3",
+      image: "/trainer-3-min.jpg",
     },
     {
       id: 4,
       name: "Sue Marsh",
-      image: "trainer-4",
+      image: "/trainer-4-min.jpg",
     },
   ];
 
@@ -75,10 +76,9 @@ const About = () => {
         </header>
         <section className="mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-9">
           {trainers.map((trainer) => (
-            <article key={trainer.id}>
-              <div className={`bg-${trainer.image} bg-style border-primary border-8 w-5/6 h-96 mx-auto relative`}>
-                <span className="bg-primary px-6 py-3 absolute bottom-5 left-0 font-bold">{trainer.name}</span>
-              </div>
+            <article key={trainer.id} className="border-primary border-8 w-5/6 h-96 mx-auto relative">
+              <Image src={trainer.image} layout="fill" className="object-cover" alt={trainer.name} />
+              <span className="bg-primary px-6 py-3 absolute bottom-5 left-0 font-bold">{trainer.name}</span>
             </article>
           ))}
         </section>

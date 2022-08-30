@@ -17,10 +17,6 @@ module.exports = {
     },
     backgroundImage: {
       "hero-img": 'url("/hero-img.jpg")',
-      "trainer-1": 'url("/trainer-1-min.jpg")',
-      "trainer-2": 'url("/trainer-2-min.jpg")',
-      "trainer-3": 'url("/trainer-3-min.jpg")',
-      "trainer-4": 'url("/trainer-4-min.jpg")',
       "faq-img": 'url("/faq-img.jpg")',
     },
   },
