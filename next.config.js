@@ -6,6 +6,9 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  images: {
+    domains: ["8aw35tgl.directus.app"],
+  },
 };
 
 module.exports = nextConfig;

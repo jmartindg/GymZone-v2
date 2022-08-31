@@ -35,8 +35,8 @@ const Navbar = () => {
     },
     {
       id: 5,
-      name: "Blog",
-      href: "/blog",
+      name: "Blogs",
+      href: "/blogs",
     },
   ];
 

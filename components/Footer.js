@@ -30,6 +30,24 @@ const Footer = () => {
     },
   ];
 
+  const footerLinks = [
+    {
+      id: 1,
+      name: "About",
+      href: "#about",
+    },
+    {
+      id: 2,
+      name: "Blogs",
+      href: "/blogs",
+    },
+    {
+      id: 3,
+      name: "Trainers",
+      href: "#trainers",
+    },
+  ];
+
   return (
     <footer className="bg-secondary font-inter">
       <div className="container mx-auto py-14 grid grid-cols-1 gap-8 md:grid-cols-4 lg:grid-cols-4">
@@ -51,16 +69,13 @@ const Footer = () => {
             <li className="text-sm hover:text-primary cursor-pointer mb-3">
               <a onClick={scrollToTop}>Back to top</a>
             </li>
-            <li className="mb-3">
-              <Link href="#about">
-                <a className="text-sm hover:text-primary transition duration-150 cursor-pointer">About</a>
-              </Link>
-            </li>
-            <li className="mb-3">
-              <Link href="#trainers">
-                <a className="text-sm hover:text-primary transition duration-150 cursor-pointer">Trainers</a>
-              </Link>
-            </li>
+            {footerLinks.map((link) => (
+              <li key={link.id} className="mb-3">
+                <Link href={link.href}>
+                  <a className="text-sm hover:text-primary transition duration-150 cursor-pointer">{link.name}</a>
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
         <div className="text-center md:text-left">
