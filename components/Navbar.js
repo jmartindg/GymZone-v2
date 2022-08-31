@@ -47,7 +47,17 @@ const Navbar = () => {
     <header className="bg-secondary">
       <nav className="container flex items-center justify-between px-4">
         <Image src="/Logo.svg" width={120} height={70} alt="GymZone Logo" />
-        <ul className={`hidden md:flex items-center ${router.pathname === "/blogs" ? "space-x-2" : "space-x-8"}`}>
+        <ul
+          className={`hidden md:flex items-center ${
+            router.pathname === "/"
+              ? "space-x-8"
+              : "" || router.pathname === "/blogs/[slug]"
+              ? "space-x-2"
+              : "space-x-8" || router.pathname === "/blogs"
+              ? "space-x-2"
+              : "space-x-8"
+          }`}
+        >
           {navLinks.map((link) => (
             <li key={link.id}>
               <Link href={link.href}>
