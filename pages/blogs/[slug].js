@@ -69,6 +69,7 @@ export const getStaticProps = async ({ params }) => {
     props: {
       blogs: res.data[0],
     },
+    revalidate: 10,
   };
 };
 
@@ -84,7 +85,7 @@ export const getStaticPaths = async () => {
         slug: post.slug,
       },
     })),
-    fallback: false,
+    fallback: "blocking",
   };
 };
 
