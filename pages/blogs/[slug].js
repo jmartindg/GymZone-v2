@@ -12,13 +12,11 @@ const BlogDetails = ({ blogs }) => {
         <title>GymZone - {blogs.title}</title>
         <meta name="description" content={blogs.excerpt} />
       </Head>
-      <section>
+      <section className="relative h-64 md:h-96">
         <Image
           src={"https://8aw35tgl.directus.app/assets/" + blogs.thumbnail.id}
-          width={100}
-          height={30}
-          className="object-cover"
-          layout="responsive"
+          objectFit="cover"
+          layout="fill"
           quality={100}
           alt={blogs.title}
         />
@@ -28,16 +26,16 @@ const BlogDetails = ({ blogs }) => {
           <section className="flex items-center pt-10">
             <Image
               src={"https://8aw35tgl.directus.app/assets/" + blogs.author.avatar}
-              width={45}
-              height={45}
+              width={40}
+              height={40}
               alt={blogs.author.name}
             />
             <footer className="flex flex-col pl-2">
-              <p className="font-semibold">{blogs.author.name}</p>
+              <p className="font-semibold text-sm">{blogs.author.name}</p>
               <small className="text-gray-600">Author</small>
             </footer>
           </section>
-          <h1 className="font-bold text-3xl pb-1 pt-3">{blogs.title}</h1>
+          <h1 className="font-black text-2xl md:text-3xl lg:text-4xl pb-1 pt-5">{blogs.title}</h1>
           <small>
             <span className="font-semibold">Posted on:</span> {format(new Date(blogs.date_created), "MMM dd, yyyy")} &bull;{" "}
             <span className="font-semibold">Updated on:</span>{" "}

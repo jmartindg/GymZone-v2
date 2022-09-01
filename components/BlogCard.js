@@ -2,9 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { BiChevronRight } from "react-icons/bi";
-import { format } from "date-fns";
 
-const BlogCard = ({ title, slug, author, dateUpdated, excerpt, thumbnail = "/placeholder-image.jpg", avatar, tags }) => {
+const BlogCard = ({ title, slug, author, excerpt, thumbnail = "/placeholder-image.jpg", avatar, tags }) => {
   return (
     <article className="border">
       <header>
@@ -28,9 +27,7 @@ const BlogCard = ({ title, slug, author, dateUpdated, excerpt, thumbnail = "/pla
         <h2 className="text-lg md:text-xl text-secondary font-bold py-3">{title}</h2>
         <div className="flex items-center space-x-1">
           <Image src={"https://8aw35tgl.directus.app/assets/" + avatar} width={20} height={20} alt={author} />
-          <small>
-            {author} &bull; {format(new Date(dateUpdated), "MMM dd, yyyy")}
-          </small>
+          <small>{author}</small>
         </div>
         <p className="text-sm py-3 text-gray-800 text-ellipsis">{excerpt}</p>
         <Link href={`/blogs/${slug}`} className="self-end">

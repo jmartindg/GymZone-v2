@@ -28,7 +28,6 @@ const Blogs = ({ blogs }) => {
               slug={blog.slug}
               title={blog.title}
               author={blog.author.name}
-              dateUpdated={blog.date_updated ? blog.date_updated : blog.date_created}
               excerpt={blog.excerpt}
               thumbnail={blog.thumbnail.id}
               avatar={blog.author.avatar}
@@ -44,7 +43,7 @@ const Blogs = ({ blogs }) => {
 export async function getStaticProps() {
   const res = await directus.items("blogs").readByQuery({
     fields: ["*", "thumbnail.id", "author.*"],
-    sort: "-date_updated",
+    sort: "-date_created",
   });
 
   return {

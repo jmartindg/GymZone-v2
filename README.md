@@ -12,7 +12,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - TailwindCSS
 - React Icons
 - React Markdown
-- Directus Headless CMS
+- [Directus Headless CMS](https://directus.io/)
 - Date-fns
 
 ## Images Used
