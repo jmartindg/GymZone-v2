@@ -1,12 +1,14 @@
-import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
+import React from "react";
 import { AiFillFacebook, AiFillInstagram, AiFillYoutube } from "react-icons/ai";
 import NavItem from "./NavItem";
 
 const Footer = () => {
   const router = useRouter();
+
+  const getCurrentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -139,7 +141,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container mx-auto text-center border-t-2 border-gray-800 py-4">
-        <small className="text-gray-400">Copyright &copy; 2022 - GymZone | All rights reserved.</small>
+        <small className="text-gray-400">Copyright &copy; {getCurrentYear} - GymZone | All rights reserved.</small>
       </div>
     </footer>
   );
