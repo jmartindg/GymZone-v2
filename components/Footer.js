@@ -43,11 +43,6 @@ const Footer = () => {
       href: "#about",
     },
     {
-      id: 2,
-      name: "Blogs",
-      href: "/blogs",
-    },
-    {
       id: 3,
       name: <NavItem item="Trainers" />,
       href: "#trainers",

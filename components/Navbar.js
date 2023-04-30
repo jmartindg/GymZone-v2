@@ -1,7 +1,7 @@
-import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import NavItem from "./NavItem";
@@ -36,28 +36,13 @@ const Navbar = () => {
       name: <NavItem item="Contact Us" />,
       href: "#contact-us",
     },
-    {
-      id: 5,
-      name: "Blogs",
-      href: "/blogs",
-    },
   ];
 
   return (
     <header className="bg-secondary">
       <nav className="container flex items-center justify-between px-4">
         <Image src="/Logo.svg" width={120} height={70} alt="GymZone Logo" />
-        <ul
-          className={`hidden md:flex items-center ${
-            router.pathname === "/"
-              ? "space-x-8"
-              : "" || router.pathname === "/blogs/[slug]"
-              ? "space-x-2"
-              : "space-x-8" || router.pathname === "/blogs"
-              ? "space-x-2"
-              : "space-x-8"
-          }`}
-        >
+        <ul className={"hidden md:flex items-center space-x-8"}>
           {navLinks.map((link) => (
             <li key={link.id}>
               <Link href={link.href}>
