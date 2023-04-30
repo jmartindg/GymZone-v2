@@ -1,6 +1,6 @@
 # GymZone
 
-A gym website built with Next.js using Directus headless cms for blog page. All of the content (copywriting, names, locations, contact information, and prices) in this website are made up only.
+A gym website built with Next.js. All of the content (copywriting, names, locations, contact information, and prices) in this website are made up only.
 
 This is a rewritten project of [GymZone](https://github.com/jmartindg/GymZone) built in React.
 
@@ -11,9 +11,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Next.js
 - TailwindCSS
 - React Icons
-- React Markdown
-- [Directus Headless CMS](https://directus.io/)
-- Date-fns
 
 ## Images Used
 
